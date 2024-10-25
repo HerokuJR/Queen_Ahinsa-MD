@@ -179,3 +179,42 @@ console.log(e)
 reply(e)
 }
 })
+
+//====================================esana news=============================================
+
+
+cmd({
+    pattern: "esananews",
+    alias: ["esana","news6"],
+    desc: "esanaNews",
+    category: "news",
+    use: '.esananews',
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, reply }) => {
+try{
+
+const news = await fetchJson(`${apilink}/esana`)
+  
+const msg = `
+           🏛️ ESANA NEWS 🏛️
+
+       
+• *Title* - ${news.result.title}
+
+• *News* - ${news.result.desc}
+
+• *Link* - ${news.result.url}
+
+`
+
+
+await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+} catch (e) {
+console.log(e)
+reply(e)
+}
+})
+
+
+//==========================================
