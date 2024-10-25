@@ -10,7 +10,7 @@
 <<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">⭕Queen_Ahinsa-MD⭕<br></h1>
 <p align="center">
-<img src="[https://telegra.ph/file/cad7038fe82e47f79c609.jpg](https://img.shields.io/badge/Session_id-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black)" />
+<img src="https://telegra.ph/file/cad7038fe82e47f79c609.jpg" />
 <<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 </p>
 
