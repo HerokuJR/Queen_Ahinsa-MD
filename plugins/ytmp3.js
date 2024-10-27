@@ -32,6 +32,8 @@ let message = `‎‎           🎶 YT SONG DOWNLOADER 🎶
  🧿 Views: ${data.views}
  🤵 Author: ${data.author.name}
   📎 Url: ${data.url}
+
+  𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫
 `
   
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
