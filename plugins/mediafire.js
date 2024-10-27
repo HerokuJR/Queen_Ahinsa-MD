@@ -13,6 +13,7 @@ cmd({
     desc: "mediafire",
     category: "download",
     use: '.mfire < mediafire url >',
+    react: "🧚‍♂️",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply, q }) => {
