@@ -14,6 +14,7 @@ cmd({
     desc: "Download xvideo.com porn video",
     category: "download",
     use: '.xvideo < text >',
+    react: "🎉️",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply, q }) => {
