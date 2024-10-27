@@ -8,6 +8,9 @@ fetchLatestBaileysVersion,
 Browsers
 } = require('@whiskeysockets/baileys')
 
+
+
+const l = console.log
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson } = require('./lib/functions')
 const fs = require('fs')
 const P = require('pino')
@@ -17,7 +20,6 @@ const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
-const prefix = '.'
 
 const ownerNumber = ['94775713391']
 
@@ -29,7 +31,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("Session downloaded 📥")
+console.log("Session downloaded ✅")
 })})}
 
 const express = require("express");
@@ -39,7 +41,16 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("Connecting King_Dilisha-MD 🧬...");
+//=================mongodb======================
+const connectDB = require('./lib/mongodb')
+connectDB();
+//==============================================
+const {readEnv} = require('./lib/database')
+const config = await readEnv();
+const prefix = config.PREFIX
+//==============================================
+        
+console.log("Connecting Dilisha-MD 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -59,7 +70,7 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('📥 ¼ Installing... ')
+console.log('🌟 Installing... ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
@@ -67,9 +78,9 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful 🔌')
-console.log('Bot connected to whatsapp ✅')
+console.log('DILISHA-MD IS RUN ✅')
 
-let up = `King_Dilisha-MD connected successful ✅\n\nPREFIX: ${prefix} \n\nDILISHA GIMSHAN MADE BY NOW`;
+let up = `DILISHA CONNECTED 👿\n\nPREFIX: ${prefix}`;
 
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://telegra.ph/file/cad7038fe82e47f79c609.jpg` }, caption: up })
 
@@ -133,14 +144,18 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               }
             }
 
-///================
-
+ //================================================     
 if(senderNumber.includes("94775713391")){
 if(isReact) return
-m.react("⏳")
-}
-//===================
-        
+m.react("💚")
+}  
+//=============================================================================
+ //============================================================================ 
+if(!isOwner && congig.MODE === "private") return
+if(!isOwner && iGgroup && config.MODE === "inbox") return
+if(!isOwner && !isGroup && config.MODE === "groups") return
+//============================================================================       
+
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -171,12 +186,12 @@ mek.type === "stickerMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 }});
-//============================================================================ 
 
+        
 })
 }
 app.get("/", (req, res) => {
-res.send("hey, bot started 🏆");
+res.send("Queen_Ahinsa-MD STARTED ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
