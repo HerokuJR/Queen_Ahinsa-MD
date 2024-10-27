@@ -33,6 +33,9 @@ const msg = `
 
 • *Upload Date and Time* - ${mfire.result.date}
 
+
+  𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫
+
 `
   
 // SEND DETAILS
