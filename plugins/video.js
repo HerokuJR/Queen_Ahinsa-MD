@@ -7,6 +7,7 @@ cmd({
     pattern: "video",
     desc: "download video",
     category: "download",
+    react: "🎬",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -26,10 +27,6 @@ let desc = `
  🤵 Author: ${data.author.name}
   📎 Url: ${data.url}
 `
-
-
-await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
-
 
 //download video
 
