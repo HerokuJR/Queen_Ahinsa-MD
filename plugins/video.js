@@ -3,7 +3,7 @@
 const { cmd } = require('../command')
 const { fetchJson } = require('../lib/functions')
 
-const apilink = 'https://tinyurl.com/2axc42rt' // API LINK ( DO NOT CHANGE THIS!! )
+const apilink = 'https://tinyurl.com/2ynf68vw' // API LINK ( DO NOT CHANGE THIS!! )
 
 cmd({
     pattern: "video",
