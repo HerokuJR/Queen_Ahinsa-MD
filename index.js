@@ -67,7 +67,7 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful 🔌')
-console.log('Bot connected to whatsapp ✅)
+console.log(''Whatsapp Connected ✅)
 
 let up = `𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫 connected successful ✅\n\nPREFIX: ${prefix}`;
 
@@ -134,7 +134,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
 
 
 
-//=====================******React*****========================//
+//=====================******React******========================//
         
  //================================================     
 if(senderNumber.includes("94775713391")){
@@ -185,7 +185,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey, bot started✅");
+res.send("hey, bot started ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
