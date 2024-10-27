@@ -67,7 +67,7 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful 🔌')
-console.log(''Whatsapp Connected ✅)
+console.log('Whatsapp Connected ✅')
 
 let up = `𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫 connected successful ✅\n\nPREFIX: ${prefix}`;
 
