@@ -12,7 +12,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 if(!isOwner) return
 const {exec} = require("child_process")
-reply("restarting 🔄...")
+reply("𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫 restarting 🕝...")
 await sleep(1500)
 exec("pm2 restart all")
 }catch(e){
