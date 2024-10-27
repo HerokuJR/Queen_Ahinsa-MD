@@ -13,6 +13,7 @@ cmd({
     desc: "downloadTiktok",
     category: "download",
     use: '.tiktok < url >',
+    react: "📽️",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply, q }) => {
