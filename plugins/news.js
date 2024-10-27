@@ -16,6 +16,7 @@ cmd({
     desc: "lankadeepaNews",
     category: "news",
     use: '.lankadeepanews',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply }) => {
@@ -51,6 +52,7 @@ cmd({
     desc: "bbcNews",
     category: "news",
     use: '.bbcnews',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply }) => {
@@ -87,6 +89,7 @@ cmd({
     desc: "hiruNews",
     category: "news",
     use: '.hirunews',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply }) => {
@@ -120,6 +123,7 @@ cmd({
     desc: "hiruNews",
     category: "news",
     use: '.sirasa',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply }) => {
@@ -153,6 +157,7 @@ cmd({
     desc: "deranaNews",
     category: "news",
     use: '.derana',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply}) => {
@@ -189,6 +194,7 @@ cmd({
     desc: "esanaNews",
     category: "news",
     use: '.esananews',
+    react: "🧾",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply }) => {
