@@ -34,6 +34,9 @@ const msg = `
 • *Duration* - ${tiktok.result.duration}
 
 • *Views* - ${tiktok.result.views}   
+
+
+     𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫
 `
   
 // SEND DETAILS
