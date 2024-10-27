@@ -33,15 +33,20 @@ await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message
 
 //download video
 
-let down = await fg.ytv(url)
+await conn.sendMessage(from,{image:{url: data. thumbnail},caption:desc},{quoted:mek});
+
+//download audio
+
+let down = await fg.yta(url)
 let downloadUrl = down.dl_url
 
-// SEND VIDEO NORMAL TYPE and DOCUMENT TYPE
-await conn.sendMessage(from, { video: { url: ytdl.result.dl_link }, mimetype: "video/mp4" }, { quoted: mek })
-await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "video/mp4", fileName: data.title + ".mp4", caption: `${data.title}`}, { quoted: mek })
-  
-} catch(e){
+// send audio + document message
+await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫"},{quoted:mek})
+
+
+}catch(e){
 console.log(e)
-reply(e)
+reply('${e}')
 }
 })
