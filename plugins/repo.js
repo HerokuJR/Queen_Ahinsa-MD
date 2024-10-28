@@ -29,7 +29,9 @@ let dec = `*👋 Hello ${pushname}*
 
 `
 await conn.sendMessage(from,{image:{url: `your alive img url`},caption:dec},{quoted:mek});
+await m.react("✅");
 
+    
 }catch(e){
 console.log(e)
 reply(`${e}`)
