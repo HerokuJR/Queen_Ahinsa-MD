@@ -7,7 +7,7 @@
 
  <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 <h1>.              🌟OFFICIAL🌟.          </h1>
-<<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<<a><img src='https://i.ibb.co/SR76mBh/Pu3-ZYHBS5139.jpg'/></a>
 <h1 align="center">⭕Queen_Ahinsa-MD⭕<br></h1>
 <p align="center">
 <img src="https://i.ibb.co/pw0KBP3/OS5f-Wz-Jj7577.jpg" />
