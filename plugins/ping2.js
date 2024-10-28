@@ -20,7 +20,7 @@ const startTime = Date.now()
         const endTime = Date.now()
         const ping = endTime - startTime
         await conn.sendMessage(from, { text: `*♻️ Speed... : ${ping}ms*`}, { quoted: message })
-        await m.reply("✅"),
+        await m.reply("✅");
     } catch (e) {
         console.log(e)
         reply(`${e}`)
