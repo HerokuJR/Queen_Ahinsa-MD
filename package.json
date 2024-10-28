@@ -54,6 +54,7 @@
     "moment-timezone": "^0.5.45",
     "nayan-media-downloader": "^2.4.7",
     "google-image-sr": "^1.0.0",
-    "sinhalasub.lk":"9.0.0"
+    "sinhalasub.lk":"9.0.0",
+    "mongoose":"8.7.3"
   }
 }
