@@ -1,8 +1,7 @@
 // XVIDEO DOWNLOAD COMMAND
 
+const { cmd } = require('../command')
 const { fetchJson } = require('../lib/functions')
-const config = require('../config')
-const { cmd, commands } = require('../command')
 
 const apilink = 'https://dark-yasiya-api-new.vercel.app' // API LINK ( DO NOT CHANGE THIS!! )
 
@@ -10,11 +9,11 @@ const apilink = 'https://dark-yasiya-api-new.vercel.app' // API LINK ( DO NOT CH
 
 cmd({
     pattern: "xvdl",
-    alias: ["xvdl","xnxx","ph"],
+    alias: ["xvdl","xnxx","ph""],
+    react: "🔞",
     desc: "Download xvideo.com porn video",
     category: "download",
     use: '.xvideo < text >',
-    react: "🔞",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, reply, q }) => {
@@ -42,6 +41,8 @@ const msg = `
 • *Deslike* - ${xv_info.result.deslike}
 
 • *Size* - ${xv_info.result.size}
+
+    𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫
 `
 
 
@@ -49,36 +50,12 @@ await conn.sendMessage( from, { image: { url: xv_info.result.image || '' }, capt
 
 // SEND VIDEO
 await conn.sendMessage(from, { document: { url: xv_info.result.dl_link }, mimetype: "video/mp4", fileName: xv_info.result.title, caption: xv_info.result.title }, { quoted: mek });
+await m.react("✅");
 
+} catch (error) {
+console.log(error)
+reply(error)
+}
+})
 
-
-let buttons = [
-            {
-                name: "quick_reply",
-                buttonParamsJson: JSON.stringify({
-                    display_text: "xvdl",
-                    id: `.xvdl ${result.url}`
-                }),
-            },
-            {
-                name: "quick_reply",
-                buttonParamsJson: JSON.stringify({
-                    display_text: "Document",
-                    id: `.xvdl ${result.url}±${result.title}`
-                }),
-            }
-            ]
-            let message = {
-                image: result.thumbnail,
-                header: '',
-                footer: wm,
-                body: caption
-
-            }
-            return await conn.sendButtonMessage(from, buttons, m, message)
-        } catch (e) {
-            console.log(e)
-            reply('*Error !!*')
-        }
-    })
-
+// Follow us : https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
