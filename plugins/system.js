@@ -7,7 +7,7 @@ cmd({
     alias: ["status","botinfo"],
     desc: "Check up time , ram usage and more",
     category: "main",
-    react: "🔋",
+    react: "⚙️",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
@@ -23,6 +23,7 @@ let status = `┌─────────────────────
 > 𝑸𝒖𝒆𝒆𝒏_𝑨𝒉𝒊𝒏𝒔𝒂-𝑴𝑫
 `
 return reply(`${status}`)
+await m.react("✅");
   
 }catch(e){
 console.log(e)
