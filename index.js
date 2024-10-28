@@ -90,7 +90,7 @@ console.log('Queen_Ahinsa-MD ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴡʜᴀᴛsᴀᴘ
 let up = `> *➺ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ QUEEN ʟᴏᴠᴇʀ⁴³²✅*
 
 
-╭⊱✫🔮 SILENT-SOBX-MD 🔮✫⊱╮
+╭⊱✫🔮 Queen_Ahinsa-MD 🔮✫⊱╮
 │✫➠ - *📂REPOSITORY NAME:* Queen_Ahinsa-MD
 │✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
 │✫➠ - *🛡️OWNER:* sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²
