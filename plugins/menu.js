@@ -301,7 +301,9 @@ let madeMenu = `
 └───────────────┈⊰
 `
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+await m.react("✅");
 
+    
 }catch(e){
 console.log(e);
 reply(`${e}`)
