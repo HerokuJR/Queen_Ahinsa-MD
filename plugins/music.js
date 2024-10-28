@@ -1,4 +1,5 @@
-const config = require('../config')
+const { cmd } = require('../command')
+const { fetchJson } = require('../lib/functions')
 const dl = require('@bochilteam/scraper') 
 const fs = require('fs')
 const {
