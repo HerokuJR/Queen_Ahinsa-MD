@@ -2,28 +2,24 @@ const {readEnv} = require('../lib/database')
 const {cmd , commands} = require('../command')
 
 cmd({
-
     pattern: "menu",
-
-    react: "🛸",
-
-    alias: ["panel","commands"],
-
-    desc: "Get bot\'s command list.",
-
+    desc: "get cmd list",
     category: "main",
-
-    use: '.menu',
-
+    react: "📟",
     filename: __filename
-
 },
-
-async(conn, mek, m,{from, l, quoted, body, isCmd, umarmd, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 const config = await readEnv();
-
+let menu = {
+main: '',
+download: '',
+group: '',
+owner: '',
+convert: '',
+search: ''
+};
+    
 let madeMenu = ` 
   ╭════ DILISHA ════─❃
 ┃▢╭─────────────┈
