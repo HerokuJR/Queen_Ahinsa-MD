@@ -1,30 +1,31 @@
-const {readEnv} = require('..lib/database')
+const {readEnv} = require('../lib/database')
 const {cmd , commands} = require('../command')
+const os = require("os")
+const {runtime} = require('../lib/functions')
+const axios = require('axios')
 
 cmd({
+
     pattern: "menu",
-    desc: "get cmd list",
+
+    react: "🛸",
+
+    alias: ["panel","commands"],
+
+    desc: "Get bot\'s command list.",
+
     category: "main",
-    react: "📟",
+
+    use: '.menu',
+
     filename: __filename
+
 },
-async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+
+async(conn, mek, m,{from, l, quoted, body, isCmd, umarmd, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+
 try{
 const config = await readEnv();
-let menu = {
-main: '',
-download: '',
-group: '',
-owner: '',
-convert: '',
-search: ''
-};
-
-for (let i = 0; i < commands.length; i++) {
-if (commands[i].pattern && !commands[i].dontAddCommandList) {
-menu[commands[i].category] += `${config.PREFIX}${commands[i].pattern}\n`;
- }
-}
 
 let madeMenu = ` 
   ╭════ DILISHA ════─❃
