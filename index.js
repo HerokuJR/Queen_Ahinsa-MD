@@ -8,15 +8,25 @@ fetchLatestBaileysVersion,
 Browsers
 } = require('@whiskeysockets/baileys')
 
+
+const l = console.log
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson } = require('./lib/functions')
 const fs = require('fs')
+const ff = require('fluent-ffmpeg')
 const P = require('pino')
 const config = require('./config')
 const qrcode = require('qrcode-terminal')
+const StickersTypes = require('wa-sticker-formatter')
 const util = require('util')
 const { sms,downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
+const { fromBuffer } = require('file-type')
+const bodyparser = require('body-parser')
+const mongoose = require('mongoose')
+const { tmpdir } = require('os')
+const Crypto = require('crypto')
+const path = require('path')
 
 const ownerNumber = ['94775713391']
 
@@ -28,12 +38,12 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("Session downloaded âœ…")
+console.log("Session downloaded ✅")
 })})}
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 9090;
 
 //=============================================
 
@@ -47,7 +57,7 @@ const config = await readEnv();
 const prefix = ('.')
 //=================================
         
-console.log("Connecting wa bot 🕝.");
+console.log("ᴄᴏɴɴᴇᴄᴛɪɴɢ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -67,18 +77,27 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('🕝¼ Installing... ')
+console.log('😼 ɪɴsᴛᴀʟʟɪɴɢ ᴘʟᴜɢɪɴs ғɪʟᴇs ᴘʟᴢ ᴡᴀɪᴛ... ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('Plugins installed successful 🔌')
-console.log('Bot connected to whatsapp ✅')
+console.log('ᴘʟᴜɢɪɴs ɪɴsᴛᴀʟʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ✅')
+console.log('sɪʟᴇɴᴛ-Queen_Ahinsa-MD ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴡʜᴀᴛsᴀᴘᴘ ✅')
 
-let up = `Queen_Ahinsa-MD connected successful ✅\n\nPREFIX: ${prefix}`;
+let up = `> *➺sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ QUEEN ʟᴏᴠᴇʀ⁴³²✅*
 
+
+╭⊱✫🔮 SILENT-SOBX-MD 🔮✫⊱╮
+│✫➠ - *📂REPOSITORY NAME:* Queen_Ahinsa-MD
+│✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
+│✫➠ - *🛡️OWNER:* sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²
+│✫➠ - *🌐 URL:* https://github.com/HerokuSL/Queen_Ahinsa-MD
+╰━━━━━━━━━━━━━━━━━╯
+
+*YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\nPREFIX: ${prefix}`;
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://i.ibb.co/V9HDXqB/x-Qq16h207414.jpg` }, caption: up })
 
 }
@@ -89,7 +108,9 @@ conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]
 if (!mek.message) return	
 mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
-if (mek.key && mek.key.remoteJid === 'status@broadcast') return
+if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
+await conn.readMessages([mek.key])
+}
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
@@ -114,10 +135,11 @@ const participants = isGroup ? await groupMetadata.participants : ''
 const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
 const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
 const isAdmins = isGroup ? groupAdmins.includes(sender) : false
+const isReact = m.message.reactionMessage ? true : false
 const reply = (teks) => {
 conn.sendMessage(from, { text: teks }, { quoted: mek })
 }
-
+        
 conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               let mime = '';
               let res = await axios.head(url)
@@ -140,15 +162,36 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
               }
             }
 
-//==========================**********====**********==============================
+//================ownerreact
+if(senderNumber.includes("94775713391")){
+if(isReact) return
+m.react("👑")
+}
 
+if(senderNumber.includes("94775713391")){
+if(isReact) return
+m.react("👑")
+}
 
+if(senderNumber.includes("94775713391")){
+if(isReact) return
+m.react("🦋")
+}
+//==========================public react
+
+//============================        
+        
+//=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
-if(!isOwner && !isGroup && config.MODE === "groups") return    
+if(!isOwner && isGroup && config.MODE === "groups") return
+//======================================================
 
-//==================***********============************==========================
 
+
+
+
+        
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -179,15 +222,13 @@ mek.type === "stickerMessage"
 ) {
 command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply})
 }});
-//============================================================================ 
 
-       
 })
 }
 app.get("/", (req, res) => {
-res.send("hey, bot started ✅");
+res.send("HEY, Queen_Ahinsa-MD STARTED ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
-}, 4000);  
+}, 4000);
