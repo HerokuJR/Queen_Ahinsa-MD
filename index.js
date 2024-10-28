@@ -57,7 +57,7 @@ const config = await readEnv();
 const prefix = ('.')
 //=================================
         
-console.log("ᴄᴏɴɴᴇᴄᴛɪɴɢ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ 🧬...");
+console.log("ᴄᴏɴɴᴇᴄᴛɪɴɢ QUEEN ʙᴏᴛ 🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -85,9 +85,9 @@ require("./plugins/" + plugin);
 }
 });
 console.log('ᴘʟᴜɢɪɴs ɪɴsᴛᴀʟʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ✅')
-console.log('sɪʟᴇɴᴛ-Queen_Ahinsa-MD ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴡʜᴀᴛsᴀᴘᴘ ✅')
+console.log('Queen_Ahinsa-MD ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴡʜᴀᴛsᴀᴘᴘ ✅')
 
-let up = `> *➺sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ QUEEN ʟᴏᴠᴇʀ⁴³²✅*
+let up = `> *➺ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ QUEEN ʟᴏᴠᴇʀ⁴³²✅*
 
 
 ╭⊱✫🔮 SILENT-SOBX-MD 🔮✫⊱╮
@@ -163,21 +163,14 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             }
 
 
-//==========================public react
 
-//============================        
-        
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && isGroup && config.MODE === "groups") return
 //======================================================
 
-
-
-
-
-        
+  
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
