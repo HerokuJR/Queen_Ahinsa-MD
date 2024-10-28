@@ -38,6 +38,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
@@ -72,6 +74,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
@@ -109,6 +113,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
@@ -143,6 +149,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
@@ -179,6 +187,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
@@ -216,6 +226,8 @@ const msg = `
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
+await m.react("✅");
+
 } catch (e) {
 console.log(e)
 reply(e)
