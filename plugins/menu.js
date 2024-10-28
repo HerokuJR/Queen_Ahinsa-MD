@@ -23,288 +23,148 @@ async(conn, mek, m,{from, l, quoted, body, isCmd, umarmd, args, q, isGroup, send
 
 try{
 const config = await readEnv();
-    
-let madeMenu = ` 
-  ╭════ DILISHA ════─❃
-┃▢╭─────────────┈
-┃▢│ Prefix : .
-┃▢│ download : menu down
-┃▢│ Bot : KING_DILISHA-MD
-┃▢│ Owner : ${menu.pushname}
-┃▢│ Date : today
-┃▢│ Time : time now
-┃▢│ Plugins : 300
-┃▢│ Version : v2
-┃▢│ Ram : 6GB
-┃▢│ Uptime : ${menu.uptime}
-┃▢│ group : down row 
-┃▢│ search : down
-┃▢│ convert : transate
-┃▢╰─────────────┈
-╰══════════════════─❃
+let madeMenu = `❁ ════ ❃•◯•❃ ════ ❁
+
+*Queen_Ahinsa-MD*
+
+     *${pushname}*
+     
+❁ ════ ❃•◯•❃ ════ ❁
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━
+      *Queen_Ahinsa-MD Official Menu*
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+*Queen_Ahinsa-MD Select Your Favourite Catacory³²👨🏻‍💻*
 
 
-┌─⊰ 💻 CORE 💻
-│⊳ alive
-│⊳ help
-│⊳ listmenu
-│⊳ plugins
-│⊳ install
-│⊳ delplugin
-│⊳ pluginstore
-│⊳ support
-│⊳ request
-│⊳ report
-│⊳ uptime
-│⊳ buttons
-│⊳ restart
-│⊳ setreply
-│⊳ setmenu  ⌈number⌋
-│⊳ setlist  ⌈number⌋
-│⊳ setalive  ⌈number⌋
-│⊳ setgreetings  ⌈number⌋
-│⊳ setytsmsg
-│⊳ prefix
-│⊳ mode
-│⊳ setcmd  ⌈media⌋
-│⊳ delcmd  ⌈media⌋
-│⊳ lockcmd  ⌈media⌋
-│⊳ unlockcmd
-│⊳ listcmd
-│⊳ owner
-└───────────────┈⊰
-
-┌─⊰ 👮🏻‍♂️ ADMINS 👮🏻‍♂️
-│⊳ add  ⌈user⌋
-│⊳ remove  ⌈user⌋
-│⊳ invite  ⌈user⌋
-│⊳ gcrequest
-│⊳ acceptall
-│⊳ rejectall
-│⊳ promote  ⌈user⌋
-│⊳ demote  ⌈user⌋
-│⊳ tagall  ⌈text⌋
-│⊳ hidetag  ⌈text⌋
-│⊳ delete2
-│⊳ gclink
-│⊳ group
-│⊳ gcpp
-│⊳ gcregister
-│⊳ agerestriction
-│⊳ setagelimit  ⌈number⌋
-│⊳ enable  ⌈options⌋
-│⊳ disable  ⌈options⌋
-└───────────────┈⊰
-
-┌─⊰ 🤖 AI 🤖
-│⊳ gpt4  ⌈text⌋
-│⊳ aiart  ⌈text⌋
-│⊳ pixabay  ⌈text⌋
-│⊳ bingchat  ⌈text⌋
-│⊳ bingimg  ⌈query⌋
-│⊳ brainshop  ⌈text⌋
-│⊳ blackbox  ⌈text⌋
-└───────────────┈⊰
-
-┌─⊰ 🧩 OWNER 🧩
-│⊳ bcaud  ⌈audio⌋
-│⊳ bcvn  ⌈voicenote⌋
-│⊳ bcvid  ⌈video⌋
-│⊳ bcimg  ⌈image⌋
-│⊳ bctext  ⌈text⌋
-│⊳ block  ⌈user⌋
-│⊳ unblock  ⌈user⌋
-│⊳ setpp  ⌈image⌋
-│⊳ ban  ⌈user⌋
-│⊳ unban  ⌈user⌋
-│⊳ addmod  ⌈user⌋
-│⊳ delmod  ⌈user⌋
-│⊳ leavegc
-│⊳ join  ⌈url⌋
-│⊳ edit  ⌈text⌋
+*╭──❮ DOWNLOAD COMMANDS ❯*
 │
-│⊳ setbio  ⌈text⌋
-│⊳ autoreply
-│⊳ chatbot
-│⊳ cooldown
-│⊳ autobio
-│⊳ autoblock
-│⊳ onlypm
-│⊳ antipm
-│⊳ autoread
-│⊳ autotyping
-│⊳ welcome
-│⊳ goodbye
-│⊳ pdm
-│⊳ gcm
-│⊳ antionce
-│⊳ reactcmd
-│⊳ reactmsg
-│⊳ autostatus
-│⊳ addwarn  ⌈user⌋
-│⊳ delwarn  ⌈user⌋
-│⊳ resetwarn  ⌈user⌋
-│⊳ antiwords  ⌈words⌋
-│⊳ delword  ⌈words⌋
-│⊳ listword  ⌈words⌋
-│⊳ antifake
-│⊳ addantifake  ⌈numbers⌋
-│⊳ delantifake  ⌈numbers⌋
-└───────────────┈⊰
+│📖 COMMAND: .play
+│ℹ️ Download Audio from yt
+│ 
+│📖 COMMAND: .song
+│ℹ️ Download song from yt
+│ 
+│📖 COMMAND: .apk
+│ℹ️ Download apk from playstore
+│ 
+│📖 COMMAND: .video
+│ℹ️ Download video from yt
+│ 
+│📖 COMMAND: .fb
+│ℹ️ Download  video from fb
+│ 
+│📖 COMMAND: .tk
+│ℹ️ Download video from tiktok
+│ 
+│📖 COMMAND: .ig
+│ℹ️ Download video from ig
+│ 
+│📖 COMMAND: .gdrive
+│ℹ️ Download drive files
+│ 
+│📖 COMMAND: .wamod
+│ℹ️ Download wamod apk
+│
+│📖 COMMAND: .img
+│ℹ️ Download image
+│
+│📖 COMMAND: .xvideo
+│ℹ️ Download xxx video
+╰────────────⦁ 
 
-┌─⊰ ♻️ CONVERT ♻️
-│⊳ toimg  ⌈image⌋
-│⊳ loaud  ⌈vn/video⌋
-│⊳ tovn  ⌈audio/video⌋
-│⊳ vv  ⌈onceview⌋
-│⊳ tempurl  ⌈media⌋
-│⊳ sticker  ⌈media⌋
-└───────────────┈⊰
+*╭──❮ SEARCH COMMANDS ❯*
+│
+│📖 COMMAND: .yts
+│ℹ️ Serch videos from yt
+╰────────────⦁  
 
-┌─⊰ 📂 DOWNLOAD 📂
-│⊳ pinterest  ⌈query⌋
-│⊳ pinturl  ⌈url⌋
-│⊳ ringtone  ⌈text⌋
-│⊳ mediafire  ⌈url⌋
-│⊳ igdl  ⌈url⌋
-│⊳ igs  ⌈username⌋
-│⊳ twitterdl  ⌈url⌋
-│⊳ facebook  ⌈url⌋
-│⊳ gitclone  ⌈url⌋
-│⊳ youtube  ⌈query⌋
-└───────────────┈⊰
+*╭──❮‍ MAIN COMMANDS ❯*
+│
+│📖 COMMAND: .alive
+│ℹ️ Check online or not
+│  
+│📖 COMMAND: .ping
+│ℹ️ Check bot speed
+│  
+│📖 COMMAND: .menu
+│ℹ️ Nero main menu
+│
+│📖 COMMAND: .menu2
+│ℹ️ Nero main menu2
+│ 
+│📖 COMMAND: .ai
+│ℹ️ chat with ai bot
+│
+│📖 COMMAND: .system
+│ℹ️ check bot systems
+│
+│📖 COMMAND: .owner
+│ℹ️ get owner info
+│ 
+│📖 COMMAND: .status
+│ℹ️ check bot runtime
+╰────────────⦁
 
-┌─⊰ 😂 FUN 😂
-│⊳ couple
-│⊳ fact
-│⊳ flirt
-│⊳ quote
-│⊳ gaycheck  ⌈user⌋
-│⊳ cutecheck  ⌈user⌋
-│⊳ lesbicheck  ⌈user⌋
-│⊳ hornycheck  ⌈user⌋
-│⊳ prettycheck  ⌈user⌋
-│⊳ lovelycheck  ⌈user⌋
-│⊳ uglycheck  ⌈user⌋
-│⊳ handsomecheck  ⌈user⌋
-│⊳ smartcheck  ⌈user⌋
-│⊳ dumbcheck  ⌈user⌋
-│⊳ strongcheck  ⌈user⌋
-│⊳ weakcheck  ⌈user⌋
-│⊳ perfectcheck  ⌈user⌋
-│⊳ flirtycheck  ⌈user⌋
-│⊳ simpcheck  ⌈user⌋
-│⊳ genzcheck  ⌈user⌋
-│⊳ sigmacheck  ⌈user⌋
-│⊳ rizzcheck  ⌈user⌋
-│⊳ maturecheck  ⌈user⌋
-│⊳ vibeycheck  ⌈user⌋
-│⊳ wholesomecheck  ⌈user⌋
-│⊳ toxiccheck  ⌈user⌋
-│⊳ dripcheck  ⌈user⌋
-│⊳ savagecheck  ⌈user⌋
-│⊳ cringecheck  ⌈user⌋
-│⊳ edgycheck  ⌈user⌋
-│⊳ nerdcheck  ⌈user⌋
-│⊳ chadcheck  ⌈user⌋
-│⊳ goblincheck  ⌈user⌋
-│⊳ lgigaChadcheck  ⌈user⌋
-│⊳ sturdycheck  ⌈user⌋
-│⊳ wokecheck  ⌈user⌋
-│⊳ basiccheck  ⌈user⌋
-│⊳ suscheck  ⌈user⌋
-│⊳ basedcheck  ⌈user⌋
-│⊳ kingcheck  ⌈user⌋
-│⊳ queencheck  ⌈user⌋
-│⊳ lgbtqcheck  ⌈user⌋
-│⊳ beautifulcheck  ⌈user⌋
-│⊳ charactercheck  ⌈user⌋
-└───────────────┈⊰
+*╭──❮ OTHER COMMANDS ❯*
+│
+│📖 COMMAND: .hirunews/news
+│ℹ️ Get news result for life
+│ 
+│📖 COMMAND: .wabeta
+│ℹ️ Get whatsapp beta news
+│
+│📖 COMMAND: .sitech
+│ℹ️ Get tech news
+│ 
+│📖 COMMAND: .nasa
+│ℹ️ Get nasa news
+╰────────────⦁
 
-┌─⊰ _*🃏 GAMES 🃏*_
-│⊳ dare
-│⊳ truth
-│⊳ tictactoe
-│⊳ detictactoe
-└───────────────┈⊰
+*╭──❮ GROUP COMMANDS ❯*
+│
+│📖 COMMAND: .mute
+│ℹ️ Mute group
+│
+│📖 COMMAND: .unmute
+│ℹ️ Unmute group
+│
+│📖 COMMAND: .left
+│ℹ️ left group
+│
+│📖 COMMAND: .jid
+│ℹ️ group jid
+╰────────────⦁
 
-┌─⊰ 🧧 GENERAL 🧧
-│⊳ listgc
-│⊳ listpc
-│⊳ modlist
-│⊳ couplepp
-│⊳ admins  ⌈text⌋
-│⊳ tts  ⌈text⌋
-│⊳ getbio  
-│⊳ getpp  ⌈user⌋
-│⊳ ping
-│⊳ setresname  ⌈name⌋
-│⊳ setresage  ⌈number⌋
-│⊳ setresgender
-│⊳ setresstate  ⌈name⌋
-└───────────────┈⊰
+*╭──❮ OWNER COMMANDS ❯*
+│
+│📖 COMMAND: .update
+│ℹ️ update bot velue 
+│
+│📖 COMMAND: .restart 
+│ℹ️ restart your bot
+╰────────────⦁
 
-┌─⊰ 🍜 MAKER 🍜
-│⊳ meme  ⌈image⌋
-│⊳ remini  ⌈image⌋
-└───────────────┈⊰
+*╭──❮ CONVERT COMMANDS ❯*
+│
+│📖 COMMAND: .sticker
+│ℹ️ convert photo to sticker
+╰────────────⦁
 
-┌─⊰ 🌟 RELIGIOUS 🌟
-│⊳ islamicwall
-│⊳ ganpatiwall
-│⊳ shreeram
-└───────────────┈⊰
 
-┌─⊰ 🕵🏻‍♂️ SEARCH 🕵🏻‍♂️
-│⊳ wikipedia  ⌈query⌋
-│⊳ konachan  ⌈query⌋
-│⊳ an1  ⌈query⌋
-│⊳ happymod  ⌈query⌋
-│⊳ webtoons  ⌈query⌋
-│⊳ tth  ⌈query⌋
-│⊳ wattpad  ⌈query⌋
-│⊳ steam  ⌈query⌋
-│⊳ soundcloud  ⌈query⌋
-│⊳ playstore  ⌈query⌋
-│⊳ wikimedia  ⌈query⌋
-│⊳ lyrics  ⌈query⌋
-│⊳ npm  ⌈query⌋
-│⊳ imdb  ⌈query⌋
-│⊳ weather  ⌈query⌋
-│⊳ search  ⌈query⌋
-│⊳ gimg  ⌈query⌋
-└───────────────┈⊰
 
-┌─⊰ 🛸 STALKER 🛸
-│⊳ igstalk  ⌈username⌋
-│⊳ gcinfo  ⌈url⌋
-│⊳ gitstalk  ⌈username⌋
-└───────────────┈⊰
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-┌─⊰ 🍜 STICKER 🍜
-│⊳ quotely  ⌈text⌋
-│⊳ smeme  ⌈image⌋
-│⊳ ttp  ⌈text⌋
-└───────────────┈⊰
+Queen_Ahimsa-MD Official Whatsapp Bot³²*
 
-┌─⊰ 👨🏻‍🔧 TOOLS 👨🏻‍🔧
-│⊳ translate
-│⊳ readmore  ⌈text⌋
-│⊳ fliptxt  ⌈text⌋
-│⊳ ss  ⌈url⌋
-│⊳ ss2  ⌈url⌋
-│⊳ ss3  ⌈url⌋
-│⊳ take  ⌈media⌋
-│⊳ tinyurl  ⌈url⌋
-│⊳ fancy  ⌈text⌋
-└───────────────┈⊰
+╰━❁ ═══ ❃•⇆•❃ ═══ ❁━╯
 `
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
-await m.react("✅");
 
-    
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+
 }catch(e){
-console.log(e);
+console.log(e)
 reply(`${e}`)
 }
 })
