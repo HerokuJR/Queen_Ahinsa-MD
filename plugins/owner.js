@@ -13,12 +13,19 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 const config = await readEnv();
 let owner = ` 
+--------------------------------
 *HEAR IS BOT OWNER INFO*
-*NAME:-* *Queen_Ahinsa-MD users*
-*AGE:-* *18YEARS*
-*PUBLIC NAME:-* *Queen*
-
-> *BY SILENTLOVER432*
+--------------------------------
+*NAME:-* *Queen_Ahinsa-MD User*
+________________________________
+*BOT CATACORY*:- *All Round*
+________________________________
+*REPO*:-*https://github.com/HerokuSL/Queen_Ahinsa-MD/tree/main*
+--------------------------------
+*CONTACT*:-*+94775713391*
+--------------------------------
+>WHATSAPP BOT BY DILISHA
+--------------------------------
 `
 await conn.sendMessage(from, { text: owner ,
   contextInfo: {
@@ -35,8 +42,8 @@ externalAdReply: {
 title: 'SILENTLOVER432',
 body: `${pushname}`,
 mediaType: 1,
-sourceUrl: "https://wa.me/+94775713391?text=HYqueen4 I'M MSG YOU FROM OWNER ADS" ,
-thumbnailUrl: "https://i.ibb.co/V9HDXqB/x-Qq16h207414.jpg" ,
+sourceUrl: "0742346814 I'M MSG YOU FROM OWNER ADS" ,
+thumbnailUrl: "https://i.ibb.co/SR76mBh/Pu3-ZYHBS5139.jpg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }
