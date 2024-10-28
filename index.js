@@ -87,13 +87,13 @@ require("./plugins/" + plugin);
 console.log('ᴘʟᴜɢɪɴs ɪɴsᴛᴀʟʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ✅')
 console.log('Queen_Ahinsa-MD ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ᴡʜᴀᴛsᴀᴘᴘ ✅')
 
-let up = `> *➺ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ QUEEN ʟᴏᴠᴇʀ⁴³²✅*
+let up = `> *SRILANKAN SUPER WHATSAPP BOTZ IN EATH NOW
 
 
 ╭⊱✫🔮 Queen_Ahinsa-MD 🔮✫⊱╮
 │✫➠ - *📂REPOSITORY NAME:* Queen_Ahinsa-MD
-│✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
-│✫➠ - *🛡️OWNER:* sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²
+│✫➠ - *📃DESCRIPTION:* REAL SYSTEM WHATSAPP BOT
+│✫➠ - *🛡️OWNER:*WHATSAPP BOT SRILANKA 
 │✫➠ - *🌐 URL:* https://github.com/HerokuSL/Queen_Ahinsa-MD
 ╰━━━━━━━━━━━━━━━━━╯
 
@@ -164,7 +164,7 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
 
 
 
-//=================================WORKTYPE=========================================== 
+//=================================WORKTYPE==============
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && isGroup && config.MODE === "groups") return
