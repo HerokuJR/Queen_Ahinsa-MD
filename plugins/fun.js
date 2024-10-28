@@ -18,6 +18,7 @@ cmd({
             pattern: "question",
             desc: "Random Question.",
             category: "fun",
+            react: "🎀",
             filename: __filename,
         },
         async(Void, text) => {
@@ -29,6 +30,7 @@ cmd({
             pattern: "truth",
             desc: "truth and dare(truth game.).",
             category: "fun",
+            react: "🏛️",
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -40,6 +42,7 @@ cmd({
             pattern: "dare",
             desc: "truth and dare(dare game.).",
             category: "fun",
+            react: "🎉️",
             filename: __filename,
         },
         async(Void, citel, text) => {
@@ -51,6 +54,7 @@ cmd({
         pattern: "fact",
         desc: "Sends fact in chat.",
         category: "fun",
+        react: "🎲",
         filename: __filename,
     },
     async(Void, citel, text) => {
@@ -64,6 +68,7 @@ cmd({
         pattern: "quotes",
         desc: "Sends quotes in chat.",
         category: "fun",
+        react: "🪗",
         filename: __filename,
     },
     async(Void, citel, text) => {
@@ -83,6 +88,7 @@ return citel.reply(replyf)
         pattern: "define",
         desc: "urban dictionary.",
         category: "fun",
+        react: "♨️",
         filename: __filename,
     },
     async(Void, citel, text) => {
