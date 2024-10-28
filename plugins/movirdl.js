@@ -25,7 +25,7 @@ cmd({
         }
 
         const movieInfo = `
-*🎬 SILENT-SOBX-MD 🎬*
+*🎬 Queen_Ahinsa-MD 🎬*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
