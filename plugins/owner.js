@@ -14,9 +14,9 @@ try{
 const config = await readEnv();
 let owner = ` 
 *HEAR IS BOT OWNER INFO*
-*NAME:-* *USMAN.S*
-*AGE:-* *20 YEARS*
-*PUBLIC NAME:-* *loverme*
+*NAME:-* *Queen_Ahinsa-MD users*
+*AGE:-* *18YEARS*
+*PUBLIC NAME:-* *Queen*
 
 > *BY SILENTLOVER432*
 `
