@@ -44,7 +44,7 @@ await conn.sendMessage( from, { image: { url: 'https://i.ibb.co/dPw1fHD/mfire.jp
 
 // SEND FILE
 await conn.sendMessage(from, { document: { url: mfire.result.dl_link }, mimetype: mfire.result.fileType , fileName: mfire.result.fileName, caption: mfire.result.fileName }, { quoted: mek });
-
+await m.react("✅");
   
 } catch (e) {
 console.log(e)
