@@ -39,7 +39,7 @@ let message = `‎‎           🎶 YT SONG DOWNLOADER 🎶
 await conn.sendMessage(from, { image: { url : data.thumbnail }, caption: message }, { quoted : mek })
   
 // SEND AUDIO NORMAL TYPE and DOCUMENT TYPE
-},    
+    
 await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: data.title + ".mp3", caption: `${data.title}`}, { quoted: mek })
 await m.react("✅");
     
