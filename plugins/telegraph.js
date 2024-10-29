@@ -1,5 +1,6 @@
 const { cmd } = require('../command');
 const axios = require('axios');
+const util = require('util');
 const { Buffer } = require('buffer');
 cmd({
         pattern: "paste",
