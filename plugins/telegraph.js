@@ -1,6 +1,6 @@
-const { cmd }   = require('../lib');
-const util = require('util');
+const { cmd } = require('../command');
 const axios = require('axios');
+const { Buffer } = require('buffer');
 cmd({
         pattern: "paste",
         desc: "create paste of text.",
