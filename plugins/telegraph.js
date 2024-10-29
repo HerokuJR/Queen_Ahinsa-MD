@@ -1,9 +1,6 @@
-const { fetchJson } = require('../lib/functions')
-const config = require('../config')
-const { cmd, commands } = require('../command')
-const axios = require('axios');
+const { cmd }   = require('../lib/functions');
 const util = require('util');
-const { Buffer } = require('buffer');
+const axios = require('axios');
 cmd({
         pattern: "paste",
         desc: "create paste of text.",
