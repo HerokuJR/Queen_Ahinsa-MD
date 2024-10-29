@@ -1,9 +1,9 @@
 
-const { fetchJson } = require('../lib/functions')
+const { tlang,cmd } = require('../lib/functions')
 
-const config = require('../config')
+const Config = require('../config')
 
-const { cmd, commands } = require('../command')
+const prefix = Config.prefix
 
 const maker = require('mumaker')
 
