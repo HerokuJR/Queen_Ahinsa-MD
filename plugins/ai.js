@@ -13,7 +13,7 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
 return reply(`${data.data}`)
-await m.reply("🧚‍♂️"),
+await m.reply("🧚‍♂️");
 }catch(e){
 console.log(e)
 reply(`${e}`)
