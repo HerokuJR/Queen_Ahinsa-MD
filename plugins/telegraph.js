@@ -3,6 +3,7 @@ const util = require('util');
 const axios = require('axios');
 cmd({
         pattern: "paste",
+        react: "🪄",
         desc: "create paste of text.",
         category: "general",
         filename: __filename,
