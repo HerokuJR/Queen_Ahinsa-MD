@@ -1,7 +1,9 @@
 
-const { tlang,cmd } = require('../lib')
+const { fetchJson } = require('../lib/functions')
 
-const Config = require('../config')
+const config = require('../config')
+
+const { cmd, commands } = require('../command')
 
 const prefix = Config.prefix
 
