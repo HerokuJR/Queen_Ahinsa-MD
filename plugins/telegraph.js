@@ -1,7 +1,7 @@
 const { cmd }   = require('../lib/functions');
 const util = require('util');
-const config = require('../config');
-const { cmd } = require('../command');
+const config = require('../config')
+const {cmd , commands} = require('../command')
 const axios = require('axios');
 
 cmd({
